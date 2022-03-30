@@ -2,29 +2,34 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('plan') {
             steps {
-                echo 'Hello World'
+                echo 'plan is done'
             }
         }
-        stage('build') {
+        stage('code') {
             steps {
-                echo 'Building'
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'Deploying'
+                echo 'code is done'
             }
         }
         stage('test') {
             steps {
-                echo 'Testing'
+                echo 'Testing the project'
             }
         }
         stage('release') {
             steps {
-                echo 'Releasing'
+                echo 'releaseing the new version..'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'deploy is done..'
+            }
+        }
+         stage('monitor') {
+            steps {
+                echo 'monitoring..'
             }
         }
     }
